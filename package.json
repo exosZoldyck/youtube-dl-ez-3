@@ -1,0 +1,16 @@
+{
+    "name": "youtube-dl-ez-3",
+    "author": {
+        "name": "exosZoldyck"
+    },
+    "version": "3.0",
+    "main": "main.js",
+    "dependencies": {
+        "electron": "^30.5.1",
+        "electron-packager": "^17.1.2"
+    },
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-packager . youtube-dl-ez-3 --platform=win32 --icon ./assets/icons/youtube-dl-ez.ico --overwrite"
+    }
+}

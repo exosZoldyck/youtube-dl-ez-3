@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url(./assets/fonts/Consolas.ttf);
+}
+
+:root{
+    color: white;
+}
+
+body{
+    background-color: #1f1f1f;
+}
+
+.formatSelection-container{
+    width: 45%;
+    height: calc(45% + 5px);
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formatSelection{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    background-color: #2f2f2f;
+}
+
+.format-container{
+    width: calc(100% - 9px * 2);
+    height: 25px;
+    padding: 2px;
+    border: 2px solid #4f4f4f;
+    border-radius: 10px;
+    margin: 5px;
+
+    display: flex;
+    align-items: center;
+    
+    background-color: #3f3f3f;
+    color: white;
+    font-size: 0.9rem;
+
+    transition-duration: 0.25s;
+}
+
+.format-container:hover{
+    transition-duration: 0.25s;
+    cursor: pointer;
+    border-color: white;
+}
+
+.format-content{
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    margin-left: 4px;
+
+    display: flex;
+    align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-wrap: normal;
+    white-space: nowrap;
+
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.thumbnailPreview-container{
+    width: calc(100% - (45% + 10px) - 15px - 10px);
+    height: 45%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnailPreview{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    border: 2px solid #2f2f2f;
+    border-radius: 5px;
+}
+
+.thumbnailPreview-hidden{
+    display: none;
+}
+
+.textBoxes-container{
+    width: 100vw;
+    height: calc(100vh - 45vh - 10px);
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.urlTextBox-container{
+    width: 100vw;
+    height: fit-content;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.urlTextBox{
+    width: calc(100%);
+    height: 1rem;
+    padding: 4px;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom: 0;
+
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-wrap: normal;
+    white-space: nowrap;
+
+    background-color: #2f2f2f;
+    color: white;
+    font-family: sans-serif;
+}
+
+.downloadButton{
+    width: calc(12.5vw);
+    min-width: 85px;
+    max-width: 120px;
+    height: 28px;
+    border: 2px solid limegreen;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 10px;
+
+    transition-duration: 0.25s;
+    
+    background-color: #57BD8A;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.downloadButton:hover{
+    transition-duration: 0.25s;
+    cursor: pointer;
+    background-color: limegreen;
+    border-color: #57BD8A;
+}
+
+.downloadButton-disable{
+    transition-duration: 0.25s;
+    border: 2px solid #2f2f2f;
+    background-color: #2f2f2f;
+    color: gray
+}
+
+.downloadButton-disable:hover{
+    cursor: default;
+    border: 2px solid #2f2f2f;
+    background-color: #2f2f2f;
+}
+
+.downloadButton-cancel{
+    transition-duration: 0.25s;
+    border: 2px solid #3f3f3f;
+    background-color: #2f2f2f;
+}
+
+.downloadButton-cancel:hover{
+    transition-duration: 0.25s;
+    cursor: pointer;
+    border: 2px solid darkred;
+    background-color: red;
+}
+
+.outputTextBox-container{
+    width: calc(100% - 10px * 2);
+    height: 100%;
+    margin: 10px;
+
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.outputTextBox{
+    width: calc(100% - 6px * 2);
+    height: calc(100% - 6px * 2);
+    padding: 4px;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+    margin: 0;
+
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background-color: #2f2f2f;
+    color: white;
+
+    font-size: 9pt;
+    font-family: 'Consolas';
+}
+
+.outputTextBox:focus {
+    outline-width: 0;
+}
+
+.no-outline{
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

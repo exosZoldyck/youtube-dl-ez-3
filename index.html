@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>youtube-dl-ez-3</title>
+</head>
+<body>
+    <div class="formatSelection-container">
+        <div id="formatSelection" class="formatSelection">
+
+        </div>
+    </div>
+
+    <div class="thumbnailPreview-container">
+        <img id="thumbnailPreview" class="thumbnailPreview no-outline thumbnailPreview-hidden" src="https://i.pinimg.com/originals/2d/67/b0/2d67b0b0444ddd250c4c657c40fe6e78.jpg" alt="">
+    </div>
+
+    <div class="textBoxes-container">
+        <div class="urlTextBox-container">
+            <textarea name="urlTextBox" id="urlTextBox" class="urlTextBox" placeholder="Type or paste YouTube Video URL here" autofocus></textarea>
+            <button id="downloadButton" class="downloadButton no-outline">Download</button>
+        </div>
+    
+        <div class="outputTextBox-container">
+            <textarea name="outputTextBox" id="outputTextBox" class="outputTextBox" readonly></textarea>
+        </div>
+    </div>
+</body>
+<script defer src="render.js"></script>
+</html>

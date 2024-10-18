@@ -1,0 +1,10 @@
+/downloads/*
+/log/*
+/node_modules/*
+/temp/*
+
+/config.json
+
+/ffmpeg.exe
+/mogrify.exe
+/yt-dlp.exe
